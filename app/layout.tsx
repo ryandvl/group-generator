@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bebas_Neue, Bungee, Inter } from "next/font/google";
 
 import "./globals.css";
 
 export const interFont = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+export const bungeeFont = Bungee({
+  variable: "--font-bungee",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+export const bebasNeueFont = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -20,9 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt" suppressHydrationWarning>
-      <body
-        className={`${interFont.variable} antialiased w-screen h-screen p-6`}
-      >
+      <body className={`${interFont.variable} antialiased w-screen h-screen`}>
         {children}
       </body>
     </html>
